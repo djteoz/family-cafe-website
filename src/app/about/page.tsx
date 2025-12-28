@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -37,11 +39,13 @@ export default function AboutPage() {
               объединяет всех наших гостей.
             </p>
           </div>
-          <div className="mt-10 lg:mt-0 relative h-96 rounded-2xl overflow-hidden shadow-xl">
-            <img
+          <div className="mt-10 lg:mt-0 relative h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200">
+            <Image
               src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=800&q=80"
               alt="Семья основателей"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -55,39 +59,45 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Gallery Item 1 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
-              <img
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
+              <Image
                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
                 alt="Основной зал"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Уютные диванчики
                 </p>
               </div>
             </div>
             {/* Gallery Item 2 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
-              <img
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
+              <Image
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                 alt="Игровая зона"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Просторный зал
                 </p>
               </div>
             </div>
             {/* Gallery Item 3 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
-              <img
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
+              <Image
                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
                 alt="Летняя веранда"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Ароматный кофе
                 </p>
@@ -98,29 +108,39 @@ export default function AboutPage() {
       </div>
 
       {/* Values */}
-      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-berry mb-12">Наши ценности</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-md">
-            <div className="text-4xl mb-4">❤️</div>
-            <h3 className="text-xl font-bold mb-2">Семья на первом месте</h3>
-            <p className="text-gray-600">
-              Мы делаем всё, чтобы вам было комфортно с детьми любого возраста.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-md">
-            <div className="text-4xl mb-4">🥦</div>
-            <h3 className="text-xl font-bold mb-2">Натуральные продукты</h3>
-            <p className="text-gray-600">
-              Никаких полуфабрикатов. Готовим "из-под ножа" каждое утро.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-md">
-            <div className="text-4xl mb-4">🎈</div>
-            <h3 className="text-xl font-bold mb-2">Праздник каждый день</h3>
-            <p className="text-gray-600">
-              Дарим улыбки и хорошее настроение просто так, без повода.
-            </p>
+      <div className="py-16 bg-vanilla">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-berry mb-12">
+            Наши ценности
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
+              <div className="text-4xl mb-4">❤️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Семья на первом месте
+              </h3>
+              <p className="text-gray-600">
+                Мы делаем всё, чтобы вам было комфортно с детьми любого возраста.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
+              <div className="text-4xl mb-4">🥦</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Натуральные продукты
+              </h3>
+              <p className="text-gray-600">
+                Никаких полуфабрикатов. Готовим "из-под ножа" каждое утро.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
+              <div className="text-4xl mb-4">🎈</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Праздник каждый день
+              </h3>
+              <p className="text-gray-600">
+                Дарим улыбки и хорошее настроение просто так, без повода.
+              </p>
+            </div>
           </div>
         </div>
       </div>
