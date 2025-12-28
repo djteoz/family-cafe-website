@@ -46,6 +46,7 @@ export default function AboutPage() {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
+              unoptimized
             />
           </div>
         </div>
@@ -66,6 +67,7 @@ export default function AboutPage() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                unoptimized
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
@@ -81,6 +83,7 @@ export default function AboutPage() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                unoptimized
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
@@ -96,6 +99,7 @@ export default function AboutPage() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                unoptimized
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
@@ -120,7 +124,8 @@ export default function AboutPage() {
                 Семья на первом месте
               </h3>
               <p className="text-gray-600">
-                Мы делаем всё, чтобы вам было комфортно с детьми любого возраста.
+                Мы делаем всё, чтобы вам было комфортно с детьми любого
+                возраста.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
