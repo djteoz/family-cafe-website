@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function AboutPage() {
   return (
     <div className="bg-vanilla min-h-screen">
@@ -39,14 +37,11 @@ export default function AboutPage() {
               объединяет всех наших гостей.
             </p>
           </div>
-          <div className="mt-10 lg:mt-0 relative h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200">
-            <Image
+          <div className="mt-10 lg:mt-0 relative h-96 rounded-2xl overflow-hidden shadow-xl">
+            <img
               src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=800&q=80"
               alt="Семья основателей"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              unoptimized
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -60,48 +55,39 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Gallery Item 1 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
-              <Image
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+              <img
                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
                 alt="Основной зал"
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                unoptimized
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Уютные диванчики
                 </p>
               </div>
             </div>
             {/* Gallery Item 2 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
-              <Image
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+              <img
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                 alt="Игровая зона"
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                unoptimized
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Просторный зал
                 </p>
               </div>
             </div>
             {/* Gallery Item 3 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-200">
-              <Image
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+              <img
                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
                 alt="Летняя веранда"
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                unoptimized
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center z-10">
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
                   Ароматный кофе
                 </p>
@@ -124,8 +110,7 @@ export default function AboutPage() {
                 Семья на первом месте
               </h3>
               <p className="text-gray-600">
-                Мы делаем всё, чтобы вам было комфортно с детьми любого
-                возраста.
+                Мы делаем всё, чтобы вам было комфортно с детьми любого возраста.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md text-center">
