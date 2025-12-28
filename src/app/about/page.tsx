@@ -1,139 +1,128 @@
-"use client";
+import React from 'react';
 
 export default function AboutPage() {
   return (
-    <div className="bg-vanilla min-h-screen">
+    <div className="min-h-screen bg-[#fdfbf7]">
       {/* Hero Section */}
-      <div className="relative bg-mint-dark py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-            Наша История
-          </h1>
-          <p className="mt-6 text-xl text-white max-w-3xl mx-auto">
-            Как маленькая мечта превратилась в любимое место для сотен семей.
+      <section className="relative py-20 bg-[#2c1810] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">О Нас</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+            История нашего семейного кафе, где каждый гость становится частью большой семьи.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Story Section */}
-      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-berry mb-6">
-              С чего всё началось
-            </h2>
-            <p className="text-lg text-gray-700 mb-4">
-              Кафе "Горошек" открылось в 2020 году, когда мы, молодая семья,
-              поняли, что в нашем районе не хватает места, где было бы одинаково
-              хорошо и взрослым, и детям.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              Мы хотели создать пространство без громкой музыки и сложных блюд,
-              но с душой, домашним уютом и, конечно же, самой вкусной выпечкой.
-            </p>
-            <p className="text-lg text-gray-700">
-              Название "Горошек" родилось случайно — так мы ласково называли
-              нашего сына, когда он был совсем маленьким. Теперь это имя
-              объединяет всех наших гостей.
-            </p>
-          </div>
-          <div className="mt-10 lg:mt-0 relative h-96 rounded-2xl overflow-hidden shadow-xl">
-            <img
-              src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=800&q=80"
-              alt="Семья основателей"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Interior Gallery */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Интерьер, созданный с любовью
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Gallery Item 1 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
-              <img
-                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
-                alt="Основной зал"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <img 
+                src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Интерьер кафе" 
+                className="rounded-lg shadow-xl w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
-                  Уютные диванчики
-                </p>
-              </div>
             </div>
-            {/* Gallery Item 2 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
-              <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
-                alt="Игровая зона"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
-                  Просторный зал
-                </p>
-              </div>
-            </div>
-            {/* Gallery Item 3 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
-              <img
-                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
-                alt="Летняя веранда"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
-                  Ароматный кофе
-                </p>
-              </div>
+            <div className="w-full md:w-1/2 space-y-6">
+              <h2 className="text-3xl font-serif font-bold text-[#2c1810]">Наша История</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Мы открыли двери нашего кафе в 2010 году с простой мечтой: создать место, где семьи могли бы собираться вместе, наслаждаться вкусной едой и забывать о суете будней.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Начав с небольшого помещения и бабушкиных рецептов, мы выросли в любимое место для многих горожан. Но наши ценности остались прежними: только свежие продукты, искреннее гостеприимство и любовь к своему делу.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Values */}
-      <div className="py-16 bg-vanilla">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-berry mb-12">
-            Наши ценности
-          </h2>
+      {/* Values Section */}
+      <section className="py-16 bg-[#e6d5b8] bg-opacity-30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-serif font-bold text-center text-[#2c1810] mb-12">Наши Ценности</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="text-4xl mb-4">❤️</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Семья на первом месте
-              </h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-[#2c1810] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                ❤️
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-[#2c1810]">Семья</h3>
               <p className="text-gray-600">
-                Мы делаем всё, чтобы вам было комфортно с детьми любого возраста.
+                Мы создаем атмосферу, в которой комфортно и детям, и взрослым. У нас есть игровая зона и специальное детское меню.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="text-4xl mb-4">🥦</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Натуральные продукты
-              </h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-[#2c1810] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                🌿
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-[#2c1810]">Качество</h3>
               <p className="text-gray-600">
-                Никаких полуфабрикатов. Готовим "из-под ножа" каждое утро.
+                Используем только натуральные ингредиенты от проверенных фермеров. Никаких полуфабрикатов — готовим всё сами.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md text-center">
-              <div className="text-4xl mb-4">🎈</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Праздник каждый день
-              </h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-[#2c1810] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                ☕
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-[#2c1810]">Уют</h3>
               <p className="text-gray-600">
-                Дарим улыбки и хорошее настроение просто так, без повода.
+                Каждая деталь интерьера подобрана с любовью, чтобы вы чувствовали себя как дома.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-serif font-bold text-center text-[#2c1810] mb-12">Атмосфера</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Десерты" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Уютный столик" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Меню" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Счастливые гости" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/4259140/pexels-photo-4259140.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Кофе" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="relative group overflow-hidden rounded-lg h-64">
+              <img 
+                src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Интерьер" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
