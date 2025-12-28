@@ -12,17 +12,20 @@
 ## Запуск проекта
 
 1. Установите зависимости:
+
 ```bash
 npm install
 ```
 
 2. Создайте файл `.env.local` и добавьте настройки Telegram (см. `.env.local.example` или инструкцию):
+
 ```
 TELEGRAM_BOT_TOKEN=ваш_токен
 TELEGRAM_CHAT_ID=ваш_id
 ```
 
 3. Запустите сервер разработки:
+
 ```bash
 npm run dev
 ```

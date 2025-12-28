@@ -55,7 +55,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Gallery Item 1 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
               <img
                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
                 alt="Основной зал"
@@ -68,28 +68,28 @@ export default function AboutPage() {
               </div>
             </div>
             {/* Gallery Item 2 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
               <img
-                src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                 alt="Игровая зона"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
-                  Для малышей
+                  Просторный зал
                 </p>
               </div>
             </div>
             {/* Gallery Item 3 */}
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group">
+            <div className="relative h-64 rounded-xl overflow-hidden shadow-lg group bg-gray-100">
               <img
-                src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
                 alt="Летняя веранда"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <p className="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">
-                  Свежий воздух
+                  Ароматный кофе
                 </p>
               </div>
             </div>
