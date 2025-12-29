@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { menuItems, MenuItem } from "../../data/menu";
 import { useCart } from "@/context/CartContext";
 
@@ -96,10 +97,12 @@ export default function MenuPage() {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col"
               >
                 <div className="h-48 bg-gray-200 relative shrink-0">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   {quantity > 0 && (
                     <div className="absolute top-4 right-4 bg-berry text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">

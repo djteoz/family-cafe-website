@@ -10,6 +10,7 @@ export default function BookingPage() {
     time: "",
     guests: 2,
     comments: "",
+    consent: false,
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -21,15 +22,21 @@ export default function BookingPage() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!formData.consent) {
+      setError("Пожалуйста, подтвердите согласие на обработку персональных данных");
+      return;
+    }
     setIsLoading(true);
     setError("");
 
@@ -258,7 +265,31 @@ export default function BookingPage() {
                   />
                 </div>
               </div>
+
+              <div className="sm:col-span-2 flex items-start">
+                <div className="flex items-center h-5">
+                  <input
+                    id="consent"
+                    name="consent"
+                    type="checkbox"
+                    checked={formData.consent}
+                    onChange={handleChange}
+                    className="focus:ring-mint h-4 w-4 text-mint border-gray-300 rounded"
+                  />
+                </div>
+                <div className="ml-3 text-sm">
+                  <label htmlFor="consent" className="font-medium text-gray-700">
+                    Согласие на обработку персональных данных
+                  </label>
+                  <p className="text-gray-500">
+                    Нажимая кнопку, вы даете согласие на обработку своих
+                    персональных данных.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            {error && <div className="text-red-600 text-sm mt-2">{error}</div>}
 
             <div className="pt-4">
               <button

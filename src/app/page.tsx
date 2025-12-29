@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -41,10 +42,12 @@ export default function Home() {
           <div className="lg:w-1/2 mt-12 lg:mt-0 relative z-10">
             <div className="relative w-full max-w-lg mx-auto aspect-square bg-white/30 backdrop-blur-sm rounded-full p-8 shadow-2xl animate-pulse-slow">
               <div className="w-full h-full bg-gray-100 rounded-full overflow-hidden flex items-center justify-center relative">
-                <img
+                <Image
                   src="/hero-syrniki.jpg"
                   alt="Вкусные сырники"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  priority
                 />
                 {/* Placeholder for a delicious food image */}
                 <div className="absolute bottom-10 right-10 bg-white p-4 rounded-2xl shadow-lg transform rotate-6">

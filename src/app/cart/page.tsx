@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
@@ -13,21 +14,32 @@ export default function CartPage() {
     phone: "",
     address: "",
     comment: "",
+    consent: false,
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [error, setError] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.consent) {
+      setError("Пожалуйста, подтвердите согласие на обработку персональных данных");
+      return;
+    }
     setStatus("loading");
+    setError("");
 
     try {
       const response = await fetch("/api/order", {
@@ -134,10 +146,11 @@ export default function CartPage() {
                 {cartItems.map((item) => (
                   <li key={item.id} className="p-6 flex">
                     <div className="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-md overflow-hidden relative">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
 
@@ -279,6 +292,31 @@ export default function CartPage() {
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-berry focus:border-berry sm:text-sm"
                       />
                     </div>
+
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          id="consent"
+                          name="consent"
+                          type="checkbox"
+                          checked={formData.consent}
+                          onChange={handleInputChange}
+                          className="focus:ring-berry h-4 w-4 text-berry border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="consent"
+                          className="font-medium text-gray-700"
+                        >
+                          Согласие на обработку персональных данных
+                        </label>
+                      </div>
+                    </div>
+
+                    {error && (
+                      <div className="text-red-600 text-sm">{error}</div>
+                    )}
 
                     {status === "error" && (
                       <div className="text-red-600 text-sm">

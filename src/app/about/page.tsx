@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "О нас",
@@ -26,11 +27,12 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <img
+            <div className="w-full md:w-1/2 relative h-[400px]">
+              <Image
                 src="/about-interior.jpg"
                 alt="Интерьер кафе"
-                className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                fill
+                className="rounded-lg shadow-xl object-cover"
               />
             </div>
             <div className="w-full md:w-1/2 space-y-6">
@@ -104,45 +106,51 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Десерты"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Уютный столик"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=800"
                 alt="Меню"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Счастливые гости"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/4259140/pexels-photo-4259140.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Кофе"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <div className="relative group overflow-hidden rounded-lg h-64">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Интерьер"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
           </div>
