@@ -33,8 +33,7 @@ export const menuItems: MenuItem[] = [
     description: "Наваристый бульон, домашняя лапша, перепелиное яйцо.",
     price: 320,
     category: "main",
-    image:
-      "https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/chicken-soup.jpg",
     tags: ["kids"],
   },
   {
