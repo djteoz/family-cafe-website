@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
               <img
-                src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/about-interior.jpg"
                 alt="Интерьер кафе"
                 className="rounded-lg shadow-xl w-full h-[400px] object-cover"
               />

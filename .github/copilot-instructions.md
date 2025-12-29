@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a **Next.js 16+** project using **App Router**, **TypeScript**, and **Tailwind CSS**. It serves as a website for a family cafe ("Уют") with menu browsing, cart functionality, and table booking via Telegram.
+This is a **Next.js 16+** project using **App Router**, **TypeScript**, and **Tailwind CSS**. It serves as a website for a family cafe ("Горошек") with menu browsing, cart functionality, and table booking via Telegram.
 
 ## Architecture & Core Patterns
 

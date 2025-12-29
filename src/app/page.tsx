@@ -7,7 +7,7 @@ export default function Home() {
       <div className="relative bg-gradient-to-r from-mint-dark to-mint overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           {/* Decorative pattern or image placeholder */}
-          <div className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          <div className="w-full h-full bg-[url('/cubes-pattern.png')]"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col lg:flex-row items-center">
@@ -42,7 +42,7 @@ export default function Home() {
             <div className="relative w-full max-w-lg mx-auto aspect-square bg-white/30 backdrop-blur-sm rounded-full p-8 shadow-2xl animate-pulse-slow">
               <div className="w-full h-full bg-gray-100 rounded-full overflow-hidden flex items-center justify-center relative">
                 <img
-                  src="https://boncake.cafe/wp-content/uploads/2025/12/Bazaart_33C8A056-9B3C-410B-A58A-6084EC1A28CE.jpeg"
+                  src="/hero-syrniki.jpg"
                   alt="Вкусные сырники"
                   className="w-full h-full object-cover"
                 />
