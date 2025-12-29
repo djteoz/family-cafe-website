@@ -34,7 +34,9 @@ export default function BookingPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
-      setError("Пожалуйста, подтвердите согласие на обработку персональных данных");
+      setError(
+        "Пожалуйста, подтвердите согласие на обработку персональных данных"
+      );
       return;
     }
     setIsLoading(true);
@@ -99,6 +101,7 @@ export default function BookingPage() {
                 time: "",
                 guests: 2,
                 comments: "",
+                consent: false,
               });
             }}
             className="w-full bg-mint text-white py-2 px-4 rounded-lg font-medium hover:bg-mint-dark transition-colors duration-200"
@@ -278,7 +281,10 @@ export default function BookingPage() {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label htmlFor="consent" className="font-medium text-gray-700">
+                  <label
+                    htmlFor="consent"
+                    className="font-medium text-gray-700"
+                  >
                     Согласие на обработку персональных данных
                   </label>
                   <p className="text-gray-500">

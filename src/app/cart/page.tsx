@@ -35,7 +35,9 @@ export default function CartPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
-      setError("Пожалуйста, подтвердите согласие на обработку персональных данных");
+      setError(
+        "Пожалуйста, подтвердите согласие на обработку персональных данных"
+      );
       return;
     }
     setStatus("loading");
