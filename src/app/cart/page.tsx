@@ -2,9 +2,91 @@
 
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useState } from "react";
 
 export default function CartPage() {
-  const { cartItems, updateQuantity, removeFromCart, cartTotal } = useCart();
+  const { cartItems, updateQuantity, removeFromCart, cartTotal, clearCart } =
+    useCart();
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    address: "",
+    comment: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+    "idle"
+  );
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          items: cartItems,
+          total: cartTotal,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Failed to submit order");
+
+      setStatus("success");
+      clearCart();
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="min-h-screen bg-vanilla flex flex-col items-center justify-center px-4">
+        <div className="text-center">
+          <div className="mx-auto flex items-center justify-center h-24 w-24 rounded-full bg-green-100">
+            <svg
+              className="h-12 w-12 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h2 className="mt-4 text-2xl font-bold text-gray-900">
+            Заказ успешно оформлен!
+          </h2>
+          <p className="mt-2 text-gray-600">
+            Мы свяжемся с вами в ближайшее время для подтверждения.
+          </p>
+          <Link
+            href="/menu"
+            className="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-mint hover:bg-mint-dark"
+          >
+            Вернуться в меню
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   if (cartItems.length === 0) {
     return (
@@ -121,13 +203,107 @@ export default function CartPage() {
               </div>
 
               <div className="mt-6">
-                <button
-                  type="button"
-                  className="w-full bg-berry border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-berry-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-berry"
-                  onClick={() => alert("Переход к оформлению заказа...")}
-                >
-                  Оформить заказ
-                </button>
+                {!isCheckoutOpen ? (
+                  <button
+                    type="button"
+                    className="w-full bg-berry border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-berry-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-berry"
+                    onClick={() => setIsCheckoutOpen(true)}
+                  >
+                    Оформить заказ
+                  </button>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Имя
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-berry focus:border-berry sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Телефон
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        required
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-berry focus:border-berry sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="address"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Адрес доставки
+                      </label>
+                      <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        value={formData.address}
+                        onChange={handleInputChange}
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-berry focus:border-berry sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="comment"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Комментарий
+                      </label>
+                      <textarea
+                        name="comment"
+                        id="comment"
+                        rows={3}
+                        value={formData.comment}
+                        onChange={handleInputChange}
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-berry focus:border-berry sm:text-sm"
+                      />
+                    </div>
+
+                    {status === "error" && (
+                      <div className="text-red-600 text-sm">
+                        Произошла ошибка при отправке заказа. Попробуйте снова.
+                      </div>
+                    )}
+
+                    <div className="flex space-x-3">
+                      <button
+                        type="button"
+                        onClick={() => setIsCheckoutOpen(false)}
+                        className="flex-1 bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-berry"
+                      >
+                        Отмена
+                      </button>
+                      <button
+                        type="submit"
+                        disabled={status === "loading"}
+                        className="flex-1 bg-berry border border-transparent rounded-md shadow-sm py-2 px-4 text-sm font-medium text-white hover:bg-berry-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-berry disabled:opacity-50"
+                      >
+                        {status === "loading" ? "Отправка..." : "Подтвердить"}
+                      </button>
+                    </div>
+                  </form>
+                )}
               </div>
               <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
                 <p>
