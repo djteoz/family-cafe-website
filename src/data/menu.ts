@@ -16,7 +16,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     category: "breakfast",
     image:
-      "https://images.pexels.com/photos/6548705/pexels-photo-6548705.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "kids"],
   },
   {
@@ -26,7 +26,7 @@ export const menuItems: MenuItem[] = [
     price: 250,
     category: "breakfast",
     image:
-      "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/236812/pexels-photo-236812.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -36,7 +36,7 @@ export const menuItems: MenuItem[] = [
     price: 320,
     category: "main",
     image:
-      "https://images.pexels.com/photos/5908659/pexels-photo-5908659.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["kids"],
   },
   {
@@ -56,7 +56,7 @@ export const menuItems: MenuItem[] = [
     price: 420,
     category: "main",
     image:
-      "https://images.pexels.com/photos/4106487/pexels-photo-4106487.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/6287760/pexels-photo-6287760.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["kids", "gluten-free"],
   },
   {
@@ -66,7 +66,7 @@ export const menuItems: MenuItem[] = [
     price: 280,
     category: "dessert",
     image:
-      "https://images.pexels.com/photos/1546896/pexels-photo-1546896.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "kids"],
   },
   {
