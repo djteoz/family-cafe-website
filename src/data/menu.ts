@@ -69,8 +69,7 @@ export const menuItems: MenuItem[] = [
     description: "Сезонные фрукты с йогуртовой заправкой.",
     price: 300,
     category: "dessert",
-    image:
-      "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/fruit-salad.jpg",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -79,8 +78,7 @@ export const menuItems: MenuItem[] = [
     description: "Лимон, мята, немного сахара и газированная вода.",
     price: 200,
     category: "drink",
-    image:
-      "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/lemonade.jpg",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -89,8 +87,7 @@ export const menuItems: MenuItem[] = [
     description: "Классический кофейный напиток.",
     price: 220,
     category: "drink",
-    image:
-      "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/cappuccino.jpg",
     tags: ["vegetarian", "gluten-free"],
   },
 ];
