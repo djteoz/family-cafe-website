@@ -42,8 +42,7 @@ export const menuItems: MenuItem[] = [
     description: "Итальянская паста, свежие томаты, базилик, пармезан.",
     price: 450,
     category: "main",
-    image:
-      "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/pasta.jpg",
     tags: ["vegetarian"],
   },
   {
@@ -52,8 +51,7 @@ export const menuItems: MenuItem[] = [
     description: "Нежные котлеты, воздушное картофельное пюре.",
     price: 420,
     category: "main",
-    image:
-      "https://images.pexels.com/photos/6287760/pexels-photo-6287760.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/turkey-cutlets.jpg",
     tags: ["kids", "gluten-free"],
   },
   {
@@ -62,8 +60,7 @@ export const menuItems: MenuItem[] = [
     description: "Классический рецепт с медовыми коржами и сметанным кремом.",
     price: 280,
     category: "dessert",
-    image:
-      "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/medovik.jpg",
     tags: ["vegetarian", "kids"],
   },
   {
