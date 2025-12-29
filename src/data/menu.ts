@@ -15,8 +15,7 @@ export const menuItems: MenuItem[] = [
     description: "Подаются со сметаной и домашним вареньем.",
     price: 350,
     category: "breakfast",
-    image:
-      "https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/syrniki.jpg",
     tags: ["vegetarian", "kids"],
   },
   {
@@ -25,8 +24,7 @@ export const menuItems: MenuItem[] = [
     description: "На молоке или воде, с сезонными ягодами и медом.",
     price: 250,
     category: "breakfast",
-    image:
-      "https://images.pexels.com/photos/236812/pexels-photo-236812.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/oatmeal.jpg",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
