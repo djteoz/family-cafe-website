@@ -12,7 +12,10 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Семейное кафе Горошек",
+  title: {
+    template: "%s | Семейное кафе Горошек",
+    default: "Семейное кафе Горошек",
+  },
   description:
     "Уютное место для всей семьи. Вкусная еда, игровая зона и праздники.",
 };

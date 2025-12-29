@@ -1,4 +1,10 @@
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "О нас",
+  description: "История семейного кафе Горошек, наши ценности и атмосфера.",
+};
 
 export default function AboutPage() {
   return (
