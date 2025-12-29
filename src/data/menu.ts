@@ -16,7 +16,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     category: "breakfast",
     image:
-      "https://boncake.cafe/wp-content/uploads/2025/12/Bazaart_33C8A056-9B3C-410B-A58A-6084EC1A28CE.jpeg",
+      "https://images.pexels.com/photos/5737254/pexels-photo-5737254.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "kids"],
   },
   {
@@ -26,7 +26,7 @@ export const menuItems: MenuItem[] = [
     price: 250,
     category: "breakfast",
     image:
-      "https://images.gastronom.ru/YZNj8OojvamFNnLZiJGNLZLoB1Eypy9vnLmC6DhSd6U/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzhjYmY0ZjMxLWVmMTctNDk3MS1hMWI2LTQwMjA2NThkMGJhOS5qcGc.webp",
+      "https://images.pexels.com/photos/1300975/pexels-photo-1300975.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -36,7 +36,7 @@ export const menuItems: MenuItem[] = [
     price: 320,
     category: "main",
     image:
-      "https://avatars.mds.yandex.net/get-vertis-journal/4220003/aa8236b9-0c38-4333-a909-bb2a3b631519.jpg/1600x1600",
+      "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["kids"],
   },
   {
@@ -46,7 +46,7 @@ export const menuItems: MenuItem[] = [
     price: 450,
     category: "main",
     image:
-      "https://images.unsplash.com/photo-1626844131082-256783844137?auto=format&fit=crop&w=800&q=80&v=2",
+      "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian"],
   },
   {
@@ -56,7 +56,7 @@ export const menuItems: MenuItem[] = [
     price: 420,
     category: "main",
     image:
-      "https://images.gastronom.ru/G7FPpyRKaVQktHjXS9vN1Q7GsZ_4Rc2iTee7kgA3IJE/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzk2NGUzZTZjLTg5N2EtNDUzMS1iNjdmLTNlNmFjZTc4NzJjMS5qcGc.webp",
+      "https://images.pexels.com/photos/6941027/pexels-photo-6941027.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["kids", "gluten-free"],
   },
   {
@@ -66,7 +66,7 @@ export const menuItems: MenuItem[] = [
     price: 280,
     category: "dessert",
     image:
-      "https://lifehacker.ru/wp-content/uploads/2022/11/shutterstock_2154067297_1668017816-scaled.jpg",
+      "https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "kids"],
   },
   {
@@ -76,7 +76,7 @@ export const menuItems: MenuItem[] = [
     price: 300,
     category: "dessert",
     image:
-      "https://images.gastronom.ru/xx8vnPTumPBABpaMkQIQrO_75nZ0fxSuDQcvJj3gGdE/pr:article-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzVmYWM5ZmZlLTJmZjEtNDJlOS05NDc2LTE4OWFhYjNkNmZmNy5qcGc.webp",
+      "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -86,7 +86,7 @@ export const menuItems: MenuItem[] = [
     price: 200,
     category: "drink",
     image:
-      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+      "https://images.pexels.com/photos/210906/pexels-photo-210906.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "gluten-free", "kids"],
   },
   {
@@ -96,7 +96,7 @@ export const menuItems: MenuItem[] = [
     price: 220,
     category: "drink",
     image:
-      "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80",
+      "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["vegetarian", "gluten-free"],
   },
 ];
